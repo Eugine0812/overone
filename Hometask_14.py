@@ -42,23 +42,27 @@ class Dog:
         self.name = name
         self.age = age
 
-def change_name(self, name):
-    name = input()
-    puppy.name = name
-    return puppy.name
+    @staticmethod
+    def change_name(name):
+        A.name = name
+        B.name = name
 
-def jump(self, high):
-    return f"{self.name} прыгает на {high} см"
-
-
-def run(self, long):
-    return f"{self.name} бегает по {long} км каждый день"
+    def jump(self, high):
+        return f"{self.name} прыгает на {high} см"
 
 
-def bark(self, noise):
-    return f"{self.name} лает в {noise} db"
+    def run(self, long):
+        return f"{self.name} бегает по {long} км каждый день"
 
-puppy = Dog (30, 50, "Jakson", 6)
 
-print(puppy.name)
-print(puppy.change_name())
+    def bark(self, noise):
+        return f"{self.name} лает в {noise} db"
+
+A = Dog(30, 50, "Jakson", 6)
+B = Dog(40, 20, "Kuzia", 7)
+
+A.change_name(input("enter: "))
+print(A.name)
+
+B.change_name(input("enter: "))
+print(B.name)
